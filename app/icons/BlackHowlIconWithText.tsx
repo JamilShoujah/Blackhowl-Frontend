@@ -1,4 +1,4 @@
-import IIconProps from '../types/icon';
+import { IIconProps } from '../types/icon';
 
 const BlackHowlLogoWithText: React.FC<IIconProps> = ({
   color = 'currentColor',
