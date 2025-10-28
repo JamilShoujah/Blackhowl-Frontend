@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import BlackHowlLogoWithText from './icons/BlackHowlIconWithText';
-import { Button } from './components/buttons';
+import BlackHowlLogoWithText from '../icons/BlackHowlIconWithText';
+import { Button } from '../components/buttons';
 import { EMAILS } from '@/lib/consts';
 import { Mail } from 'lucide-react';
 
