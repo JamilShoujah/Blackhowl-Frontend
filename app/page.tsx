@@ -8,7 +8,7 @@ import { Mail } from 'lucide-react';
 
 const Home = () => {
   return (
-    <main className="relative h-screen flex items-center justify-center px-4 overflow-hidden">
+    <main className="relative h-[100dvh] flex flex-col justify-center items-center px-4 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -22,10 +22,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="w-full max-w-xl mx-auto flex flex-col justify-center h-screen sm:space-y-12 px-4">
+      <div className="w-full max-w-xl flex flex-col justify-center items-center px-4 space-y-4 sm:space-y-12">
         {/* Logo */}
         <div
-          className="flex justify-center w-48 sm:w-96 mx-auto opacity-0 animate-fade-in"
+          className="flex justify-center w-40 sm:w-96 mx-auto opacity-0 animate-fade-in"
           style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
         >
           <BlackHowlLogoWithText color="#ffffff" />
@@ -46,7 +46,7 @@ const Home = () => {
 
         {/* Contact Button */}
         <div
-          className="flex justify-center mt-4 sm:mt-6 opacity-0 animate-fade-in"
+          className="flex justify-center opacity-0 animate-fade-in"
           style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
         >
           <Button
