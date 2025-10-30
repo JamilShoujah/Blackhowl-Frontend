@@ -15,29 +15,29 @@ const Home = () => {
           src="/background.jpg"
           alt="Background"
           fill
-          className="object-cover object-[center_65%]"
+          className="object-cover object-[center_60%]"
           priority
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      <div className="w-full max-w-2xl mx-auto space-y-16 relative z-10">
+      <div className="w-full max-w-xl mx-auto space-y-12 relative z-10">
         {/* Logo */}
         <div
           className="flex justify-center opacity-0 animate-fade-in"
           style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
         >
-          <BlackHowlLogoWithText color="#ffffff" size={500} />
+          <BlackHowlLogoWithText color="#ffffff" size={400} />
         </div>
 
         {/* Coming Soon Message */}
         <div
-          className="text-center space-y-6 opacity-0 animate-fade-in"
+          className="text-center space-y-4 opacity-0 animate-fade-in"
           style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
         >
-          <h1 className="text-6xl md:text-8xl font-bold text-white tracking-tight">Coming Soon!</h1>
-          <p className="text-xl md:text-2xl text-white/90">We're revamping, stay tuned!</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight">Coming Soon!</h1>
+          <p className="text-lg md:text-xl text-white/90">We're revamping, stay tuned!</p>
         </div>
 
         {/* Contact Button (optional) */}
