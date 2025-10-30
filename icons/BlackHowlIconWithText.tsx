@@ -1,17 +1,13 @@
 import { IIconProps } from '../types/icon';
 
-const BlackHowlLogoWithText: React.FC<IIconProps> = ({
-  color = 'currentColor',
-  size = 24,
-  ...props
-}) => (
+const BlackHowlLogoWithText: React.FC<IIconProps> = ({ color = 'currentColor', ...props }) => (
   <svg
     id="Layer_1"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1417.32 1417.32"
-    width={size}
-    height={size}
+    width="100%"
+    height="100%"
     fill={color}
     {...props}
   >
