@@ -1,16 +1,10 @@
 import type { Metadata } from 'next';
-import { Bebas_Neue } from 'next/font/google';
 import './globals.css';
 
-const bebasNeue = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-bebas-neue', // define CSS variable
-});
-
 export const metadata: Metadata = {
-  title: 'Blackhowl',
-  description: 'Concerts & Events by Blackhowl.org',
+  title: 'Black Howl | Production & Media Crew',
+  description:
+    'Creative freelancers for event production, tour management, talent support, and live photo and video.',
 };
 
 export default function RootLayout({
@@ -19,8 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={bebasNeue.variable}>
-      {/* Apply antialiased globally, font is handled via CSS variable */}
+    <html lang="en">
       <body className="antialiased">{children}</body>
     </html>
   );
