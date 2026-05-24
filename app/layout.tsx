@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Black Howl | Production & Media Crew',
-  description:
-    'Creative freelancers for event production, tour management, talent support, and live photo and video.',
+  title: 'Blackhowl',
+  description: 'Concerts & Events by Blackhowl.org',
 };
 
 export default function RootLayout({
