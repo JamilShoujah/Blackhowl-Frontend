@@ -168,6 +168,8 @@ const quotes = [
   },
 ];
 
+const contactHref = EMAILS.CC ? `mailto:${EMAILS.TO}?cc=${EMAILS.CC}` : `mailto:${EMAILS.TO}`;
+
 const socialItems = [
   {
     label: 'Instagram',
@@ -196,7 +198,7 @@ const socialItems = [
   },
   {
     label: 'Email Black Howl',
-    href: `mailto:${EMAILS.TO}?cc=${EMAILS.CC}`,
+    href: contactHref,
     Icon: Mail,
   },
 ];
@@ -209,13 +211,7 @@ const Home = () => {
   const [projectCardWidth, setProjectCardWidth] = useState(0);
   const [projectGap, setProjectGap] = useState(PROJECT_GAP);
   const [projectTrackOffset, setProjectTrackOffset] = useState(0);
-  const [visibleProjectCount, setVisibleProjectCount] = useState(() => {
-    if (typeof window === 'undefined') {
-      return 1;
-    }
-
-    return window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
-  });
+  const [visibleProjectCount, setVisibleProjectCount] = useState(1);
   const [quoteIndex, setQuoteIndex] = useState(0);
 
   const carouselProjects = useMemo(() => [...projects, ...projects.slice(0, 3)], []);
@@ -344,7 +340,7 @@ const Home = () => {
               The creative team behind unforgettable live events and the moments that make them memorable.
             </p>
             <a
-              href={`mailto:${EMAILS.TO}?cc=${EMAILS.CC}`}
+              href={contactHref}
               className="display-font group mt-8 inline-flex h-12 items-center justify-center gap-3 rounded-full bg-white px-6 text-sm text-black transition hover:bg-white/82"
             >
               Get in touch
@@ -496,25 +492,16 @@ const Home = () => {
 
       <footer className="cube-footer relative overflow-hidden bg-[#171717] px-6 py-20 text-white sm:px-10 sm:py-24 lg:px-16">
         <div className="relative z-10 mx-auto flex max-w-[1900px] flex-col items-center gap-10 text-center sm:gap-16 md:items-end">
-          <div>
+          <div className="md:text-right">
             <h2 className="display-font text-[clamp(2.6rem,4vw,5.1rem)] leading-none">Get in touch</h2>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {socialItems.map(({ label, href, Icon }) =>
-                href ? (
+            <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-end">
+              {socialItems
+                .filter(({ href }) => href)
+                .map(({ label, href, Icon }) => (
                   <a key={label} aria-label={label} href={href} className="social-button">
                     <Icon className="h-6 w-6" />
                   </a>
-                ) : (
-                  <span
-                    key={label}
-                    aria-label={`${label} link coming soon`}
-                    className="social-button social-button-disabled"
-                    title={`${label} link coming soon`}
-                  >
-                    <Icon className="h-6 w-6" />
-                  </span>
-                ),
-              )}
+                ))}
             </div>
           </div>
 
