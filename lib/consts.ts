@@ -5,3 +5,11 @@ export const EMAILS = {
   CONTACT: 'contact@blackhowl.org',
   TO: 'cynthia@blackhowl.org',
 };
+
+export const SOCIAL_LINKS = {
+  INSTAGRAM: '',
+  FACEBOOK: '',
+  TIKTOK: '',
+  YOUTUBE: '',
+  X: '',
+};
